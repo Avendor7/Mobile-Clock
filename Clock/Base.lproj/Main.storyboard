@@ -15,7 +15,59 @@
                     <view key="view" contentMode="scaleToFill" id="fAn-Zo-hkM">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3p-T3-dcG">
+                                <rect key="frame" x="135" y="20" width="331" height="112"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="90"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25u-7m-ETW">
+                                <rect key="frame" x="363" y="108" width="103" height="35"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lap:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVw-L7-Phg">
+                                <rect key="frame" x="325" y="118" width="35" height="22"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3k-wP-Frh">
+                                <rect key="frame" x="284" y="196" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZF-TW-X4d">
+                                <rect key="frame" x="280" y="276" width="40" height="30"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5v-58-7Au">
+                                <rect key="frame" x="285" y="356" width="30" height="30"/>
+                                <state key="normal" title="Lap">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="25u-7m-ETW" firstAttribute="leading" secondItem="JVw-L7-Phg" secondAttribute="trailing" constant="3" id="2be-HX-xF9"/>
+                            <constraint firstItem="9ZF-TW-X4d" firstAttribute="top" secondItem="Y3k-wP-Frh" secondAttribute="bottom" constant="50" id="4jU-q6-ED9"/>
+                            <constraint firstItem="y3p-T3-dcG" firstAttribute="centerX" secondItem="Y3k-wP-Frh" secondAttribute="centerX" id="6VC-75-4c9"/>
+                            <constraint firstItem="Y3k-wP-Frh" firstAttribute="top" secondItem="JVw-L7-Phg" secondAttribute="bottom" constant="56" id="6Yw-6d-J8X"/>
+                            <constraint firstAttribute="centerX" secondItem="y3p-T3-dcG" secondAttribute="centerX" constant="-0.5" id="Moh-uw-eWx"/>
+                            <constraint firstItem="25u-7m-ETW" firstAttribute="top" secondItem="y3p-T3-dcG" secondAttribute="bottom" constant="-24" id="Tiy-pE-gYI"/>
+                            <constraint firstItem="25u-7m-ETW" firstAttribute="bottom" secondItem="JVw-L7-Phg" secondAttribute="bottom" constant="3" id="V15-wM-Vkt"/>
+                            <constraint firstItem="D5v-58-7Au" firstAttribute="centerX" secondItem="9ZF-TW-X4d" secondAttribute="centerX" id="Xp7-Fd-kjo"/>
+                            <constraint firstItem="9ZF-TW-X4d" firstAttribute="centerX" secondItem="Y3k-wP-Frh" secondAttribute="centerX" constant="-0.5" id="ZYa-RG-Kk3"/>
+                            <constraint firstItem="25u-7m-ETW" firstAttribute="trailing" secondItem="y3p-T3-dcG" secondAttribute="trailing" id="b7c-Yh-Hdm"/>
+                            <constraint firstItem="D5v-58-7Au" firstAttribute="top" secondItem="9ZF-TW-X4d" secondAttribute="bottom" constant="50" id="cNK-WS-fr6"/>
+                            <constraint firstItem="y3p-T3-dcG" firstAttribute="top" secondItem="bjk-hi-gwq" secondAttribute="bottom" id="q5y-fv-VOb"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" id="zWW-48-1Qo"/>
                 </viewController>
