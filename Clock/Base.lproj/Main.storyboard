@@ -69,7 +69,7 @@
                             <constraint firstItem="y3p-T3-dcG" firstAttribute="top" secondItem="bjk-hi-gwq" secondAttribute="bottom" id="q5y-fv-VOb"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stopwatch" id="zWW-48-1Qo"/>
+                    <tabBarItem key="tabBarItem" title="Stopwatch" image="Stopwatch" id="zWW-48-1Qo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbC-fl-AfN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +116,7 @@
                             <constraint firstItem="BVn-DQ-HSR" firstAttribute="top" secondItem="x69-ls-H6p" secondAttribute="bottom" constant="-15" id="gOC-F0-h1J"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Clock" id="e02-xW-VHa"/>
+                    <tabBarItem key="tabBarItem" title="Clock" image="Clock" id="e02-xW-VHa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZRO-yM-ONA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -142,4 +142,8 @@
             <point key="canvasLocation" x="-1109" y="-725"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clock" width="25" height="25"/>
+        <image name="Stopwatch" width="25" height="25"/>
+    </resources>
 </document>
