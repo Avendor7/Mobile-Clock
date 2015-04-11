@@ -24,20 +24,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25u-7m-ETW">
+                                <rect key="frame" x="363" y="108" width="103" height="35"/>
+                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lap:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVw-L7-Phg">
                                 <rect key="frame" x="325" y="118" width="35" height="22"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZF-TW-X4d">
-                                <rect key="frame" x="200" y="290" width="200" height="50"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Reset">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5v-58-7Au">
                                 <rect key="frame" x="200" y="390" width="200" height="50"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,6 +46,9 @@
                                 <variation key="widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="300" y="390" width="200" height="50"/>
                                 </variation>
+                                <connections>
+                                    <action selector="buttonLap:" destination="M3D-B0-1Yd" eventType="touchUpInside" id="iMy-gY-1Ls"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y3k-wP-Frh">
                                 <rect key="frame" x="200" y="190" width="200" height="50"/>
@@ -60,13 +61,21 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonStart:" destination="M3D-B0-1Yd" eventType="touchUpInside" id="6Za-Nu-rBt"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="25u-7m-ETW">
-                                <rect key="frame" x="363" y="108" width="103" height="35"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="28"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ZF-TW-X4d">
+                                <rect key="frame" x="200" y="290" width="200" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonReset:" destination="M3D-B0-1Yd" eventType="touchUpInside" id="mR5-ZV-0Os"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -145,6 +154,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Stopwatch" image="Stopwatch" id="zWW-48-1Qo"/>
                     <connections>
+                        <outlet property="buttonLap" destination="D5v-58-7Au" id="RaF-QW-zTl"/>
+                        <outlet property="buttonReset" destination="9ZF-TW-X4d" id="Sar-3X-9Vt"/>
+                        <outlet property="buttonStart" destination="Y3k-wP-Frh" id="AXq-5Y-RwT"/>
                         <outlet property="labelLap" destination="25u-7m-ETW" id="14B-rM-iAh"/>
                         <outlet property="labelTime" destination="y3p-T3-dcG" id="KHB-Xe-WUv"/>
                     </connections>

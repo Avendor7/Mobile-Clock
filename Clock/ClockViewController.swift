@@ -56,10 +56,14 @@ class ClockViewController: UIViewController {
         var amPM = "";
         
         //determine AM or PM and subract 12 from hour variable
-        if (hour > 12){
+        if (hour >= 12){
             labelAMPM.text = "PM";
             hour = hour - 12;
-        }else{
+            
+        }else if (hour == 0){
+            hour = 12;
+        }
+        else{
             labelAMPM.text = "AM";
         }
         
