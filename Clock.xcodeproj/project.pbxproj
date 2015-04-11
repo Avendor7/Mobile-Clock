@@ -14,7 +14,8 @@
 		0766988A1AC488FA00E238E6 /* ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076698891AC488FA00E238E6 /* ClockTests.swift */; };
 		DC2087831AD75D8500A19706 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2087821AD75D8500A19706 /* ModelController.swift */; };
 		DC2087851AD75D9E00A19706 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2087841AD75D9E00A19706 /* RootViewController.swift */; };
-		DC2087871AD75DAA00A19706 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2087861AD75DAA00A19706 /* DataViewController.swift */; };
+		DC2087871AD75DAA00A19706 /* ClockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2087861AD75DAA00A19706 /* ClockViewController.swift */; };
+		DCAFF2621AD8BF0600826C69 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAFF2611AD8BF0600826C69 /* StopWatchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,8 @@
 		076698891AC488FA00E238E6 /* ClockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockTests.swift; sourceTree = "<group>"; };
 		DC2087821AD75D8500A19706 /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		DC2087841AD75D9E00A19706 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
-		DC2087861AD75DAA00A19706 /* DataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		DC2087861AD75DAA00A19706 /* ClockViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockViewController.swift; sourceTree = "<group>"; };
+		DCAFF2611AD8BF0600826C69 /* StopWatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +86,8 @@
 				0766986F1AC488FA00E238E6 /* AppDelegate.swift */,
 				DC2087821AD75D8500A19706 /* ModelController.swift */,
 				DC2087841AD75D9E00A19706 /* RootViewController.swift */,
-				DC2087861AD75DAA00A19706 /* DataViewController.swift */,
+				DC2087861AD75DAA00A19706 /* ClockViewController.swift */,
+				DCAFF2611AD8BF0600826C69 /* StopWatchViewController.swift */,
 				076698771AC488FA00E238E6 /* Main.storyboard */,
 				0766987A1AC488FA00E238E6 /* Images.xcassets */,
 				0766987C1AC488FA00E238E6 /* LaunchScreen.xib */,
@@ -220,8 +223,9 @@
 			files = (
 				DC2087851AD75D9E00A19706 /* RootViewController.swift in Sources */,
 				DC2087831AD75D8500A19706 /* ModelController.swift in Sources */,
-				DC2087871AD75DAA00A19706 /* DataViewController.swift in Sources */,
+				DC2087871AD75DAA00A19706 /* ClockViewController.swift in Sources */,
 				076698701AC488FA00E238E6 /* AppDelegate.swift in Sources */,
+				DCAFF2621AD8BF0600826C69 /* StopWatchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

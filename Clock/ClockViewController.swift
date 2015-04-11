@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DataViewController: UIViewController {
+class ClockViewController: UIViewController {
 
     @IBOutlet weak var dataLabel: UILabel!
     var dataObject: AnyObject?
