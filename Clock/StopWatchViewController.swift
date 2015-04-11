@@ -33,34 +33,32 @@ class StopWatchViewController: UIViewController {
     func timerUpdate() {
         //keep track of the time and formatting the minutes, milliseconds, and seconds
         milliseconds++;
-        if (milliseconds == 60){
+        if (milliseconds == 100){
             seconds++;
             milliseconds = 0;
             if (seconds == 60){
                 minutes++;
                 seconds = 0;
                 if (minutes == 60){
-                    minutes = 0;
-                    seconds = 0;
-                    milliseconds = 0;
+                    resetWatch();
                 }
             }
         }
         
         //determine leading 0s on minutes, milliseconds, and seconds
         if (minutes <= 9){
-            leading0Min = "0"
+            leading0Min = "0";
         }else{
             leading0Min = "";
         }
         
         if (seconds <= 9){
-            leading0Sec = "0"
+            leading0Sec = "0";
         }else{
             leading0Sec = "";
         }
         if (milliseconds <= 9){
-            leading0MilSec = "0"
+            leading0MilSec = "0";
         }else{
             leading0MilSec = "";
         }
@@ -77,40 +75,55 @@ class StopWatchViewController: UIViewController {
         
         //if started
         if (startStopToggle == 0){
-            buttonStart.setTitle("Stop", forState: UIControlState.Normal);
-            startStopToggle = 1;
-            startTimer();
-            buttonReset.enabled = true;
-            buttonLap.enabled = true;
+            start();
         //if stopped
         }else if(startStopToggle == 1){
-            buttonStart.setTitle("Start", forState: UIControlState.Normal);
-            startStopToggle = 0;
-            minutes = 0;
-            seconds = 0;
-            milliseconds = 0;
-            labelLap.text = "00:00:00";
-            buttonReset.enabled = false;
-            buttonLap.enabled = false;
-            timer.invalidate();
+            stop();
         }
         
+    }
+    
+    //on start
+    func start() {
+        buttonStart.setTitle("Stop", forState: UIControlState.Normal);
+        startStopToggle = 1;
+        startTimer();
+        buttonLap.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal);
+        buttonLap.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal);
+        buttonLap.enabled = true;
+        buttonReset.enabled = true;
+    }
+    //on stop
+    func stop() {
+        buttonStart.setTitle("Start", forState: UIControlState.Normal);
+        startStopToggle = 0;
+        buttonLap.enabled = false;
+        buttonLap.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal);
+        timer.invalidate();
     }
     
     //starts the timer if not already started
     func startTimer(){
                 if !timer.valid {
             let aSelector : Selector = "timerUpdate"
-            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true);
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.001, target: self, selector: aSelector, userInfo: nil, repeats: true);
         }
     }
     //reset button press
     @IBAction func buttonReset(sender: AnyObject) {
+        resetWatch();
+        
+    }
+    
+    func resetWatch(){
         minutes = 0;
         seconds = 0;
         milliseconds = 0;
-        
+        labelLap.text = "00:00:00";
+        labelTime.text = "00:00:00";
+        stop();
     }
+    
     //lap button pressed
     @IBAction func buttonLap(sender: AnyObject) {
         labelLap.text = timerStr;
@@ -118,7 +131,8 @@ class StopWatchViewController: UIViewController {
     //onload disable the lap and reset buttons
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        buttonLap.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal);
+        buttonLap.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal);
         buttonReset.enabled = false;
         buttonLap.enabled = false;
         
